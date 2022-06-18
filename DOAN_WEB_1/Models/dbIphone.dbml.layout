@@ -1,0 +1,64 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 8.5" name="dbIphone">
+  <DataContextMoniker Name="/dbIphoneDataContext" />
+  <nestedChildShapes>
+    <classShape Id="3f688af2-7e16-411d-89b8-3b64cbf211ed" absoluteBounds="6.5, 1.75, 2, 1.7708968098958329">
+      <DataClassMoniker Name="/dbIphoneDataContext/ChiTietHD" />
+      <nestedChildShapes>
+        <elementListCompartment Id="a50e98a0-1b48-4f75-ba99-ba5643960691" absoluteBounds="6.515, 2.21, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="0cf7533a-c60e-4abe-a28d-9f411282445f" absoluteBounds="0.5, 1.625, 2, 2.1554996744791666">
+      <DataClassMoniker Name="/dbIphoneDataContext/KhachHang" />
+      <nestedChildShapes>
+        <elementListCompartment Id="e667366d-e837-4350-a9d4-19d1c76464e1" absoluteBounds="0.515, 2.085, 1.9700000000000002, 1.5954996744791665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="241345cc-b786-434e-8cca-350366f69046" absoluteBounds="3.5, 1.75, 2, 1.9631982421875003">
+      <DataClassMoniker Name="/dbIphoneDataContext/HoaDon" />
+      <nestedChildShapes>
+        <elementListCompartment Id="fd17ae6d-3219-4afc-82d2-9c56293b2d6c" absoluteBounds="3.515, 2.21, 1.9700000000000002, 1.4031982421875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="39a61768-fc97-44f7-85ba-1d0baec1d5b3" absoluteBounds="3.375, 4.5, 2, 2.1554996744791666">
+      <DataClassMoniker Name="/dbIphoneDataContext/NhanVien" />
+      <nestedChildShapes>
+        <elementListCompartment Id="cbe9dc8d-2aa3-4e3a-9574-7869996492bf" absoluteBounds="3.39, 4.96, 1.9700000000000002, 1.5954996744791665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="67a1bca6-ecd9-498e-bb16-ca99d997d8ac" absoluteBounds="6.375, 4.375, 2, 1.7708968098958327">
+      <DataClassMoniker Name="/dbIphoneDataContext/SanPham" />
+      <nestedChildShapes>
+        <elementListCompartment Id="68660293-84ad-47e7-b79d-ceb4252eff4f" absoluteBounds="6.3900000000000006, 4.835, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(5.5 : 2.63544840494792); (6.5 : 2.63544840494792)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/dbIphoneDataContext/HoaDon/HoaDon_ChiTietHD" />
+      <nodes>
+        <classShapeMoniker Id="241345cc-b786-434e-8cca-350366f69046" />
+        <classShapeMoniker Id="3f688af2-7e16-411d-89b8-3b64cbf211ed" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(2.5 : 2.73159912109375); (3.5 : 2.73159912109375)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/dbIphoneDataContext/KhachHang/KhachHang_HoaDon" />
+      <nodes>
+        <classShapeMoniker Id="0cf7533a-c60e-4abe-a28d-9f411282445f" />
+        <classShapeMoniker Id="241345cc-b786-434e-8cca-350366f69046" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(4.4375 : 4.5); (4.4375 : 3.7131982421875)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/dbIphoneDataContext/NhanVien/NhanVien_HoaDon" />
+      <nodes>
+        <classShapeMoniker Id="39a61768-fc97-44f7-85ba-1d0baec1d5b3" />
+        <classShapeMoniker Id="241345cc-b786-434e-8cca-350366f69046" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(7.4375 : 4.375); (7.4375 : 3.52089680989583)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/dbIphoneDataContext/SanPham/SanPham_ChiTietHD" />
+      <nodes>
+        <classShapeMoniker Id="67a1bca6-ecd9-498e-bb16-ca99d997d8ac" />
+        <classShapeMoniker Id="3f688af2-7e16-411d-89b8-3b64cbf211ed" />
+      </nodes>
+    </associationConnector>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>
