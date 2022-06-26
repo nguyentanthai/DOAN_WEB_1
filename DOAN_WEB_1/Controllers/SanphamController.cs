@@ -6,14 +6,10 @@ using System.Web.Mvc;
 
 namespace DOAN_WEB_1.Controllers
 {
-    public class NguoiDungController : Controller
+    public class SanphamController : Controller
     {
-        // GET: NguoiDung
-        public ActionResult Index()
-        {
-            return View();
-        }
-        public ActionResult DangKy()
+        // GET: Sanpham
+        public ActionResult Detail()
         {
             return View();
         }
