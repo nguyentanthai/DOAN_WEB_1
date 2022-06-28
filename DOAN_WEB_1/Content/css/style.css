@@ -290,7 +290,7 @@ a:focus {
           align-items: center;
   padding: 45px 0;
   background-color: #f0d43a;
-  border-radius: 0 0 0 250px;
+  border-radius: 0 0 0 1px;
   background: #3b4a6b;
 }
 
