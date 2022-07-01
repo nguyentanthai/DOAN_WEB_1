@@ -72,28 +72,33 @@
                     <div class="collapse navbar-collapse" id="navbarSupportedContent">
                         <ul class="navbar-nav">
                             <li class="nav-item active">
-                                <a class="nav-link" href="index.html">Trang Chủ <span class="sr-only">(current)</span></a>
+                                <a class="nav-link" href="/OpLungStore/Index">Trang Chủ <span class="sr-only">(current)</span></a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="watches.html"> Sản Phẩm </a>
+                                <a class="nav-link" href="/OpLungStore/Index"> Sản Phẩm </a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="about.html"> About </a>
+                                <a class="nav-link" href="/About/Index"> Giới thiệu </a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="contact.html">Liên H</a>
+                                <a class="nav-link" href="/Contact/Index">Liên Hệ</a>
                             </li>
+                            
                         </ul>
                         <div class="user_option-box">
-                            <a href="">
-                                <i class="fa fa-user" aria-hidden="true"></i>
+                            <a href="/NguoiDung/DangNhap">
+                                Đăng nhập
                             </a>
-                            <a href="">
-                                <i class="fa fa-cart-plus" aria-hidden="true"></i>
+                            <a href="/NguoiDung/DangKy">
+                               Đăng ký
                             </a>
-                            <a href="">
-                                <i class="fa fa-search" aria-hidden="true"></i>
-                            </a>
+                            <ul>
+                                <li>
+                                
+                                    @Html.Action("GiohangPartial", "Giohang")
+                               
+                                </li>
+                            </ul>
                         </div>
                     </div>
                 </nav>
@@ -110,21 +115,22 @@
                                 <div class="col-md-6">
                                     <div class="detail-box">
                                         <h1>
-                                            Ốp Lưng Iphone
+                                            Smart Watches
                                         </h1>
                                         <p>
-                                            Tạo sự thoải mái và hài lòng đến quý khách hàng khi trải nghiệm dịch vụ cũng như sử dụng sản phẩm.
-                                            <div class="btn-box">
-                                                <a href="" class="btn1">
-                                                    Liên Hệ Ngay
-                                                </a>
-                                            </div>
+                                            Aenean scelerisque felis ut orci condimentum laoreet. Integer nisi nisl, convallis et augue sit amet, lobortis semper quam.
+                                        </p>
+                                        <div class="btn-box">
+                                            <a href="" class="btn1">
+                                                Contact Us
+                                            </a>
+                                        </div>
                                     </div>
                                 </div>
                                 <div class="col-md-6">
                                     <div class="img-box">
-
-                                        <img src="~/Content/images/oplung_12_2.jpg" />
+                                        <img src="~/Content/images/op1.png" width="50px"/>
+                                        
                                     </div>
                                 </div>
                             </div>
@@ -136,22 +142,21 @@
                                 <div class="col-md-6">
                                     <div class="detail-box">
                                         <h1>
-                                            Ốp Lưng Iphone
+                                            Smart Watches
                                         </h1>
                                         <p>
-                                            Sản phẩm  được đóng gói và kiểm tra kỹ lưỡng trước khi gửi hàng.
+                                            Aenean scelerisque felis ut orci condimentum laoreet. Integer nisi nisl, convallis et augue sit amet, lobortis semper quam.
                                         </p>
                                         <div class="btn-box">
                                             <a href="" class="btn1">
-                                                Liên Hệ Ngay
+                                                Contact Us
                                             </a>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="col-md-6">
                                     <div class="img-box">
-
-                                        <img src="~/Content/images/oplung_13_1.png" />
+                                        <img src="~/Content/images/op1.png" />
                                     </div>
                                 </div>
                             </div>
@@ -163,22 +168,21 @@
                                 <div class="col-md-6">
                                     <div class="detail-box">
                                         <h1>
-                                            Ốp Lưng Iphone
+                                            Smart Watches
                                         </h1>
                                         <p>
-                                            Tiến hành đổi trả miến phí với những sản phẩm bị lỗi, do sản xuất cũng như vận chuyển.
+                                            Aenean scelerisque felis ut orci condimentum laoreet. Integer nisi nisl, convallis et augue sit amet, lobortis semper quam.
                                         </p>
                                         <div class="btn-box">
                                             <a href="" class="btn1">
-                                                Liên Hệ Ngay
+                                                Contact Us
                                             </a>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="col-md-6">
                                     <div class="img-box">
-
-                                        <img src="~/Content/images/oplung_13_2.png" />
+                                        <img src="~/Content/images/op1.png" />
                                     </div>
                                 </div>
                             </div>
@@ -193,8 +197,7 @@
             </div>
 
         </section>
-        <!-- end slider section -->
-    </div>
+        
 
     @RenderBody()
 

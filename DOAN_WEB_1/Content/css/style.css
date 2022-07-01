@@ -264,13 +264,16 @@ a:focus {
       -ms-flex-align: center;
           align-items: center;
 }
-
-.user_option-box a {
-  color: #000000;
-  text-transform: uppercase;
-  margin-left: 15px;
-  font-size: 17px;
-}
+    .user_option-box ul 
+    {
+        text-decoration:none
+    }
+    .user_option-box a {
+        color: #000000;
+        text-transform: uppercase;
+        margin-left: 15px;
+        font-size: 17px;
+    }
 
 .user_option-box a:hover {
   color: #3b4a6b;

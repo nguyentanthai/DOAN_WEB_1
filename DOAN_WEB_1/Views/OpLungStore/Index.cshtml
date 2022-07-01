@@ -1,0 +1,60 @@
+﻿@model IEnumerable<DOAN_WEB_1.Models.SANPHAM>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_LayoutPage1.cshtml";
+}
+<section class="shop_section layout_padding">
+    <div class="container">
+        <div class="heading_container heading_center">
+            <h2>
+                ỐP LƯNG IPHONE MỚI NHẤT
+            </h2>
+        </div>
+        <div class="row">
+            @foreach (var sanpham in Model)
+            {
+                <div class="col-md-6 ">
+                    <div class="box">
+                        <a href="@Url.Action("Details", "OpLungStore", new { id = sanpham.MaSP })">
+                            <div class="img-box">
+                                <img src="~/Content/images/@sanpham.HinhAnh" width="200" />
+                            </div>
+                            <div class="detail-box">
+                                <h6>
+                                    @sanpham.TenSP
+                                </h6>
+                                <h6>
+                                    Giá:
+                                    <span>
+                                        @sanpham.GiaBan
+                                    </span>
+                                </h6>
+                            </div>
+                            <div class="new">
+                                <span>
+                                    Featured
+                                </span>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            }
+
+            <div class="btn-box">
+                <a href="">
+                    Xem tất cả
+                </a>
+            </div>
+        </div>
+</section>
+
+
+
+
+
+
+
+
+
+
+
