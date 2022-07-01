@@ -51,47 +51,53 @@
         <classShapeMoniker Id="e7c3efa2-4388-4b1a-a92a-1f76d69394f3" />
       </nodes>
     </associationConnector>
-    <associationConnector edgePoints="[(2.75 : 4.26044840494792); (3.5 : 4.26044840494792)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+    <associationConnector edgePoints="[(2.75 : 4.26044840494792); (3.5 : 4.26044840494792)]" fixedFrom="NotFixed" fixedTo="NotFixed">
       <AssociationMoniker Name="/DataQLWebIPDataContext/KHACHHANG/KHACHHANG_HD" />
       <nodes>
         <classShapeMoniker Id="7cdacddc-5ee8-4413-94e6-4ceaf503260d" />
         <classShapeMoniker Id="e7c3efa2-4388-4b1a-a92a-1f76d69394f3" />
       </nodes>
     </associationConnector>
-    <associationConnector edgePoints="[(1.75 : 5.90549967447917); (1.75 : 7.35659912109375); (3.5 : 7.35659912109375)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+    <associationConnector edgePoints="[(1.75 : 5.90549967447917); (1.75 : 7.35659912109375); (3.5 : 7.35659912109375)]" fixedFrom="NotFixed" fixedTo="NotFixed">
       <AssociationMoniker Name="/DataQLWebIPDataContext/KHACHHANG/KHACHHANG_DONDATHANG" />
       <nodes>
         <classShapeMoniker Id="7cdacddc-5ee8-4413-94e6-4ceaf503260d" />
         <classShapeMoniker Id="4b5a4d02-aedf-439d-9391-4e04d101b6e3" />
       </nodes>
     </associationConnector>
-    <associationConnector edgePoints="[(5.5 : 7.28929768880208); (5.79166666666667 : 7.28929768880208 : JumpStart); (5.95833333333333 : 7.28929768880208 : JumpEnd); (6.25 : 7.28929768880208)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+    <associationConnector edgePoints="[(5.5 : 7.28929768880208); (5.79166666666667 : 7.28929768880208 : JumpStart); (5.95833333333333 : 7.28929768880208 : JumpEnd); (6.25 : 7.28929768880208)]" fixedFrom="NotFixed" fixedTo="NotFixed">
       <AssociationMoniker Name="/DataQLWebIPDataContext/DONDATHANG/DONDATHANG_CTDATHANG" />
       <nodes>
         <classShapeMoniker Id="4b5a4d02-aedf-439d-9391-4e04d101b6e3" />
         <classShapeMoniker Id="f281719d-956d-4206-9643-80335a218815" />
       </nodes>
     </associationConnector>
-    <associationConnector edgePoints="[(5.5 : 10.8277498372396); (7.25 : 10.8277498372396); (7.25 : 8.07859537760417)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+    <associationConnector edgePoints="[(5.5 : 10.8277498372396); (7.25 : 10.8277498372396); (7.25 : 8.07859537760417)]" fixedFrom="NotFixed" fixedTo="NotFixed">
       <AssociationMoniker Name="/DataQLWebIPDataContext/SANPHAM/SANPHAM_CTDATHANG" />
       <nodes>
         <classShapeMoniker Id="5d3f9b74-c309-4a6d-a6b1-ddb61deedfa8" />
         <classShapeMoniker Id="f281719d-956d-4206-9643-80335a218815" />
       </nodes>
     </associationConnector>
-    <associationConnector edgePoints="[(5.5 : 3.88544840494792); (6.25 : 3.88544840494792)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+    <associationConnector edgePoints="[(5.5 : 3.88544840494792); (6.25 : 3.88544840494792)]" fixedFrom="NotFixed" fixedTo="NotFixed">
       <AssociationMoniker Name="/DataQLWebIPDataContext/HD/HD_CHITIETHD" />
       <nodes>
         <classShapeMoniker Id="e7c3efa2-4388-4b1a-a92a-1f76d69394f3" />
         <classShapeMoniker Id="2b657c0c-510f-41c5-974e-7ca4deb567e0" />
       </nodes>
     </associationConnector>
-    <associationConnector edgePoints="[(5.5 : 9.75); (5.875 : 9.375); (5.875 : 4.35942460742187); (6.25 : 4.35942460742187)]" fixedFrom="NotFixed" fixedTo="Algorithm">
+    <associationConnector edgePoints="[(5.5 : 9.75); (5.875 : 9.375); (5.875 : 4.35942460742187); (6.25 : 4.35942460742187)]" fixedFrom="NotFixed" fixedTo="NotFixed">
       <AssociationMoniker Name="/DataQLWebIPDataContext/SANPHAM/SANPHAM_CHITIETHD" />
       <nodes>
         <classShapeMoniker Id="5d3f9b74-c309-4a6d-a6b1-ddb61deedfa8" />
         <classShapeMoniker Id="2b657c0c-510f-41c5-974e-7ca4deb567e0" />
       </nodes>
     </associationConnector>
+    <classShape Id="ead975c1-33cd-4d10-b832-d0e46b00b7d5" absoluteBounds="6.75, 1, 2, 1.3862939453125">
+      <DataClassMoniker Name="/DataQLWebIPDataContext/Admin" />
+      <nestedChildShapes>
+        <elementListCompartment Id="ea1df8b9-d2aa-43f6-af78-a09457d2097e" absoluteBounds="6.765, 1.46, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
   </nestedChildShapes>
 </ordesignerObjectsDiagram>

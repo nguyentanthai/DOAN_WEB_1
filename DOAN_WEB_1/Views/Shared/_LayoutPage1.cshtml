@@ -83,20 +83,29 @@
                             <li class="nav-item">
                                 <a class="nav-link" href="/Contact/Index">Liên Hệ</a>
                             </li>
-                            
+
                         </ul>
+                        @using (Html.BeginForm("KQTimKiem", "TimKiem"))
+                        {
+                        <input type="text" name="sTuKhoa" value="" placeholder="Nhập tên sản phẩm cần tìm" />
+                        <input type="submit" name=" submit" value="Tìm kiếm" class="form-control" style="border-radius:10px" />
+
+                        }
+
+
+
                         <div class="user_option-box">
                             <a href="/NguoiDung/DangNhap">
                                 Đăng nhập
                             </a>
                             <a href="/NguoiDung/DangKy">
-                               Đăng ký
+                                Đăng ký
                             </a>
                             <ul>
                                 <li>
-                                
+
                                     @Html.Action("GiohangPartial", "Giohang")
-                               
+
                                 </li>
                             </ul>
                         </div>
@@ -129,8 +138,8 @@
                                 </div>
                                 <div class="col-md-6">
                                     <div class="img-box">
-                                        <img src="~/Content/images/op1.png" width="50px"/>
-                                        
+                                        <img src="~/Content/images/op1.png" width="50px" />
+
                                     </div>
                                 </div>
                             </div>
@@ -197,64 +206,57 @@
             </div>
 
         </section>
-        
 
-    @RenderBody()
+
+        @RenderBody()
 
     <footer class="footer_section">
         <div class="container">
             <div class="row">
                 <div class="col-md-6 col-lg-3 footer-col">
                     <div class="footer_detail">
+
                         <h4>
-                            About
+                            Giới Thiệu
                         </h4>
                         <p>
                             Cửa Hàng Ốp Lưng Iphone TaoStore
                         </p>
                         <div class="footer_social">
-                            <a href="">
-                                <i class="fa fa-facebook" aria-hidden="true"></i>
-                            </a>
-                            <a href="">
-                                <i class="fa fa-twitter" aria-hidden="true"></i>
-                            </a>
-                            <a href="">
-                                <i class="fa fa-linkedin" aria-hidden="true"></i>
-                            </a>
-                            <a href="">
-                                <i class="fa fa-instagram" aria-hidden="true"></i>
-                            </a>
+                            
                         </div>
                     </div>
                 </div>
                 <div class="col-md-6 col-lg-3 footer-col">
                     <div class="footer_contact">
                         <h4>
-                            Reach at..
+                            Liên Hệ
                         </h4>
                         <div class="contact_link_box">
                             <a href="">
-                                <i class="fa fa-map-marker" aria-hidden="true"></i>
+                                
                                 <span>
                                     497 Phan Văn Trị, Gò Vấp
                                 </span>
                             </a>
+
                             <a href="">
-                                <i class="fa fa-phone" aria-hidden="true"></i>
+                                
                                 <span>
                                     SĐT 036606777
                                 </span>
                             </a>
                             <a href="">
-                                <i class="fa fa-envelope" aria-hidden="true"></i>
+                                
                                 <span>
                                     nguyentanthai2017@gmail.com
                                 </span>
+
                             </a>
                         </div>
                     </div>
                 </div>
+
                 <div class="col-md-6 col-lg-3 footer-col">
                     <div class="footer_contact">
                         <h4>
@@ -266,12 +268,16 @@
                                 Đăng ký
                             </button>
                         </form>
+
                     </div>
                 </div>
                 <div class="col-md-6 col-lg-3 footer-col">
                     <div class="map_container">
                         <div class="map">
-                            <div id="googleMap"></div>
+                            <div id="googleMap">
+                                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3918.8359919937448!2d106.68941111471896!3d10.823860192289361!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x317528f1b76f9fed%3A0x4c73436d7210e287!2zNDk3IMSQLiBQaGFuIFbEg24gVHLhu4ssIFBoxrDhu51uZyA1LCBHw7IgVuG6pXAsIFRow6BuaCBwaOG7kSBI4buTIENow60gTWluaCwgVmnhu4d0IE5hbQ!5e0!3m2!1svi!2s!4v1656687993690!5m2!1svi!2s" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>   
+                                
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -281,28 +287,34 @@
                     &copy; <span id="displayYear"></span> All Rights Reserved By Tấn Thái
 
                 </p>
+
             </div>
+
         </div>
+
     </footer>
-    <!-- footer section -->
-    <!-- jQery -->
+        <!-- footer section -->
+        <!-- jQery -->
 
-    <script src="~/Scripts/js/jquery-3.4.1.min.js"></script>
-    <!-- popper js -->
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous">
-    </script>
-    <!-- bootstrap js -->
+        <script src="~/Scripts/js/jquery-3.4.1.min.js"></script>
+        <!-- popper js -->
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous">
+        </script>
+        <!-- bootstrap js -->
 
-    <script src="~/Scripts/js/bootstrap.js"></script>
-    <!-- owl slider -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js">
-    </script>
-    <!-- custom js -->
+        <script src="~/Scripts/js/bootstrap.js"></script>
+        <!-- owl slider -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js">
+        </script>
+        <!-- custom js -->
 
-    <script src="~/Scripts/js/custom.js"></script>
-    <!-- Google Map -->
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCh39n5U-4IoWpsVGUHWdqB6puEkhRLdmI&callback=myMap"></script>
-    <!-- End Google Map -->
+        <script src="~/Scripts/js/custom.js"></script>
+        <!-- Google Map -->
+      
+       
+        
+
+        <!-- End Google Map -->
 
 </body>
 </html>

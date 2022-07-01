@@ -51,7 +51,10 @@ body {
   position: relative;
   font-weight: bold;
 }
-
+.ggmap {
+    float: left;
+    
+}
 .heading_container h2 span {
   color: #f0d43a;
 }
