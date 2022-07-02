@@ -1,0 +1,67 @@
+﻿@model DOAN_WEB_1.Models.SANPHAM
+
+@{
+    ViewBag.Title = "Chitietsanpham";
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+
+
+<div>
+    <h4 style="text-align:center">Thông tin chi tiết sản phẩm</h4>
+    <hr />
+    <dl class="dl-horizontal" style="text-align:center">
+        <dt>
+            Tên Sản Phẩm:
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TenSP)
+        </dd>
+
+        <dt>
+            Giá Bán :
+        </dt>
+
+        <dd>
+            @String.Format("{0:0,0}", Model.GiaBan) VNĐ
+        </dd>
+
+        <dt>
+            Mô Tả
+        </dt>
+
+        <dd >
+            @Html.DisplayFor(model => model.Mota)
+        </dd>
+
+        <dt>
+            Hình Ảnh :
+        </dt>
+
+        <dd>
+            <img src="@Url.Content("~/Content/images/"+  Model.HinhAnh)" width="120px" />
+        </dd>
+
+        <dt>
+            Số Lượng:
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SoLuong)
+        </dd>
+
+        <dt>
+            Ngày cập nhất:
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NgayCapNhap)
+        </dd>
+
+    </dl>
+</div>
+<p style="text-align:center">
+    @Html.ActionLink("ĐIỀU CHỈNH", "SuaSanPham", new { id = Model.MaSP }) |
+    @Html.ActionLink("TRỞ VỀ", "SanPham")
+</p>

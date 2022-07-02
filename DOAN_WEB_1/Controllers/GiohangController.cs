@@ -131,7 +131,8 @@ namespace DOAN_WEB_1.Controllers
             List<Giohang> gh = Laygiohang();
             ddh.MaKH = kh.MaKH;
             ddh.NgayDH = DateTime.Now;
-            
+            var ngaygiao = String.Format("{0:MM/dd/yyyy}", collection["NgayGH"]);
+            ddh.NgayGH = DateTime.Parse(ngaygiao);
             ddh.TinhTrangGH = false;
             ddh.Dathanhtoan = false;
             data.DONDATHANGs.InsertOnSubmit(ddh);

@@ -1,5 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.Default.props" Condition="Exists('$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.Default.props')" />
   <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
   <PropertyGroup>
@@ -25,6 +26,7 @@
     <UseGlobalApplicationHostFile />
     <NuGetPackageImportStamp>
     </NuGetPackageImportStamp>
+    <TypeScriptToolsVersion>4.3</TypeScriptToolsVersion>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -46,6 +48,12 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Microsoft.CSharp" />
+    <Reference Include="PagedList, Version=1.17.0.0, Culture=neutral, PublicKeyToken=abbb863e9397c5e1, processorArchitecture=MSIL">
+      <HintPath>..\packages\PagedList.1.17.0.0\lib\net40\PagedList.dll</HintPath>
+    </Reference>
+    <Reference Include="PagedList.Mvc, Version=4.5.0.0, Culture=neutral, PublicKeyToken=abbb863e9397c5e1, processorArchitecture=MSIL">
+      <HintPath>..\packages\PagedList.Mvc.4.5.0.0\lib\net40\PagedList.Mvc.dll</HintPath>
+    </Reference>
     <Reference Include="PresentationFramework" />
     <Reference Include="Sitecore.FakeDb, Version=2.0.1.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\Sitecore.FakeDb.2.0.1\lib\net471\Sitecore.FakeDb.dll</HintPath>
@@ -263,6 +271,7 @@
     <Content Include="Content\images\w4.png" />
     <Content Include="Content\images\w5.png" />
     <Content Include="Content\images\w6.png" />
+    <Content Include="Content\PagedList.css" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
@@ -343,6 +352,66 @@
     <Content Include="Scripts\owlcarousel\assets\owl.video.play.png" />
     <Content Include="Scripts\owlcarousel\owl.carousel.js" />
     <Content Include="Scripts\owlcarousel\owl.carousel.min.js" />
+    <Content Include="tinymce_6.1.0\tinymce\js\tinymce\icons\default\icons.min.js" />
+    <Content Include="tinymce_6.1.0\tinymce\js\tinymce\license.txt" />
+    <Content Include="tinymce_6.1.0\tinymce\js\tinymce\models\dom\model.min.js" />
+    <Content Include="tinymce_6.1.0\tinymce\js\tinymce\plugins\advlist\plugin.min.js" />
+    <Content Include="tinymce_6.1.0\tinymce\js\tinymce\plugins\anchor\plugin.min.js" />
+    <Content Include="tinymce_6.1.0\tinymce\js\tinymce\plugins\autolink\plugin.min.js" />
+    <Content Include="tinymce_6.1.0\tinymce\js\tinymce\plugins\autoresize\plugin.min.js" />
+    <Content Include="tinymce_6.1.0\tinymce\js\tinymce\plugins\autosave\plugin.min.js" />
+    <Content Include="tinymce_6.1.0\tinymce\js\tinymce\plugins\charmap\plugin.min.js" />
+    <Content Include="tinymce_6.1.0\tinymce\js\tinymce\plugins\codesample\plugin.min.js" />
+    <Content Include="tinymce_6.1.0\tinymce\js\tinymce\plugins\code\plugin.min.js" />
+    <Content Include="tinymce_6.1.0\tinymce\js\tinymce\plugins\directionality\plugin.min.js" />
+    <Content Include="tinymce_6.1.0\tinymce\js\tinymce\plugins\emoticons\js\emojiimages.js" />
+    <Content Include="tinymce_6.1.0\tinymce\js\tinymce\plugins\emoticons\js\emojiimages.min.js" />
+    <Content Include="tinymce_6.1.0\tinymce\js\tinymce\plugins\emoticons\js\emojis.js" />
+    <Content Include="tinymce_6.1.0\tinymce\js\tinymce\plugins\emoticons\js\emojis.min.js" />
+    <Content Include="tinymce_6.1.0\tinymce\js\tinymce\plugins\emoticons\plugin.min.js" />
+    <Content Include="tinymce_6.1.0\tinymce\js\tinymce\plugins\fullscreen\plugin.min.js" />
+    <Content Include="tinymce_6.1.0\tinymce\js\tinymce\plugins\help\plugin.min.js" />
+    <Content Include="tinymce_6.1.0\tinymce\js\tinymce\plugins\image\plugin.min.js" />
+    <Content Include="tinymce_6.1.0\tinymce\js\tinymce\plugins\importcss\plugin.min.js" />
+    <Content Include="tinymce_6.1.0\tinymce\js\tinymce\plugins\insertdatetime\plugin.min.js" />
+    <Content Include="tinymce_6.1.0\tinymce\js\tinymce\plugins\link\plugin.min.js" />
+    <Content Include="tinymce_6.1.0\tinymce\js\tinymce\plugins\lists\plugin.min.js" />
+    <Content Include="tinymce_6.1.0\tinymce\js\tinymce\plugins\media\plugin.min.js" />
+    <Content Include="tinymce_6.1.0\tinymce\js\tinymce\plugins\nonbreaking\plugin.min.js" />
+    <Content Include="tinymce_6.1.0\tinymce\js\tinymce\plugins\pagebreak\plugin.min.js" />
+    <Content Include="tinymce_6.1.0\tinymce\js\tinymce\plugins\preview\plugin.min.js" />
+    <Content Include="tinymce_6.1.0\tinymce\js\tinymce\plugins\quickbars\plugin.min.js" />
+    <Content Include="tinymce_6.1.0\tinymce\js\tinymce\plugins\save\plugin.min.js" />
+    <Content Include="tinymce_6.1.0\tinymce\js\tinymce\plugins\searchreplace\plugin.min.js" />
+    <Content Include="tinymce_6.1.0\tinymce\js\tinymce\plugins\table\plugin.min.js" />
+    <Content Include="tinymce_6.1.0\tinymce\js\tinymce\plugins\template\plugin.min.js" />
+    <Content Include="tinymce_6.1.0\tinymce\js\tinymce\plugins\visualblocks\plugin.min.js" />
+    <Content Include="tinymce_6.1.0\tinymce\js\tinymce\plugins\visualchars\plugin.min.js" />
+    <Content Include="tinymce_6.1.0\tinymce\js\tinymce\plugins\wordcount\plugin.min.js" />
+    <Content Include="tinymce_6.1.0\tinymce\js\tinymce\skins\content\dark\content.min.css" />
+    <Content Include="tinymce_6.1.0\tinymce\js\tinymce\skins\content\default\content.min.css" />
+    <Content Include="tinymce_6.1.0\tinymce\js\tinymce\skins\content\document\content.min.css" />
+    <Content Include="tinymce_6.1.0\tinymce\js\tinymce\skins\content\tinymce-5-dark\content.min.css" />
+    <Content Include="tinymce_6.1.0\tinymce\js\tinymce\skins\content\tinymce-5\content.min.css" />
+    <Content Include="tinymce_6.1.0\tinymce\js\tinymce\skins\content\writer\content.min.css" />
+    <Content Include="tinymce_6.1.0\tinymce\js\tinymce\skins\ui\oxide-dark\content.inline.min.css" />
+    <Content Include="tinymce_6.1.0\tinymce\js\tinymce\skins\ui\oxide-dark\content.min.css" />
+    <Content Include="tinymce_6.1.0\tinymce\js\tinymce\skins\ui\oxide-dark\skin.min.css" />
+    <Content Include="tinymce_6.1.0\tinymce\js\tinymce\skins\ui\oxide-dark\skin.shadowdom.min.css" />
+    <Content Include="tinymce_6.1.0\tinymce\js\tinymce\skins\ui\oxide\content.inline.min.css" />
+    <Content Include="tinymce_6.1.0\tinymce\js\tinymce\skins\ui\oxide\content.min.css" />
+    <Content Include="tinymce_6.1.0\tinymce\js\tinymce\skins\ui\oxide\skin.min.css" />
+    <Content Include="tinymce_6.1.0\tinymce\js\tinymce\skins\ui\oxide\skin.shadowdom.min.css" />
+    <Content Include="tinymce_6.1.0\tinymce\js\tinymce\skins\ui\tinymce-5-dark\content.inline.min.css" />
+    <Content Include="tinymce_6.1.0\tinymce\js\tinymce\skins\ui\tinymce-5-dark\content.min.css" />
+    <Content Include="tinymce_6.1.0\tinymce\js\tinymce\skins\ui\tinymce-5-dark\skin.min.css" />
+    <Content Include="tinymce_6.1.0\tinymce\js\tinymce\skins\ui\tinymce-5-dark\skin.shadowdom.min.css" />
+    <Content Include="tinymce_6.1.0\tinymce\js\tinymce\skins\ui\tinymce-5\content.inline.min.css" />
+    <Content Include="tinymce_6.1.0\tinymce\js\tinymce\skins\ui\tinymce-5\content.min.css" />
+    <Content Include="tinymce_6.1.0\tinymce\js\tinymce\skins\ui\tinymce-5\skin.min.css" />
+    <Content Include="tinymce_6.1.0\tinymce\js\tinymce\skins\ui\tinymce-5\skin.shadowdom.min.css" />
+    <Content Include="tinymce_6.1.0\tinymce\js\tinymce\themes\silver\theme.min.js" />
+    <Content Include="tinymce_6.1.0\tinymce\js\tinymce\tinymce.min.js" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -387,6 +456,13 @@
     <Content Include="Views\Admin\Login.cshtml" />
     <Content Include="Views\Shared\_LayoutAdmin.cshtml" />
     <Content Include="Views\Admin\Index.cshtml" />
+    <Content Include="Views\Admin\SanPham.cshtml" />
+    <Content Include="Views\Admin\ThemMoiSanPham.cshtml" />
+    <Content Include="tinymce_6.1.0\tinymce\CHANGELOG.md" />
+    <Content Include="tinymce_6.1.0\tinymce\js\tinymce\langs\README.md" />
+    <Content Include="Views\Admin\Chitietsanpham.cshtml" />
+    <Content Include="Views\Admin\XoaSanPham.cshtml" />
+    <Content Include="Views\Admin\SuaSanPham.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -406,12 +482,17 @@
   </ItemGroup>
   <ItemGroup>
     <Service Include="{3259AA49-8AA1-44D3-9025-A0B520596A8C}" />
+    <Service Include="{4A0DDDB5-7A95-4FBF-97CC-616D07737A77}" />
+  </ItemGroup>
+  <ItemGroup>
+    <TypeScriptCompile Include="tinymce_6.1.0\tinymce\js\tinymce\tinymce.d.ts" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
   </PropertyGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.targets" Condition="Exists('$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.targets')" />
   <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
   <Target Name="MvcBuildViews" AfterTargets="AfterBuild" Condition="'$(MvcBuildViews)'=='true'">
