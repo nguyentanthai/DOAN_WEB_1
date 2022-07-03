@@ -5,14 +5,14 @@
     Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
 }
 
-<h2>ThemmoiSach</h2>
+<h2>Thêm Mới Sản Phẩm</h2>
 
 @using (Html.BeginForm("ThemMoiSanPham", "Admin", FormMethod.Post, new { @enctype = "multipart/form-data" })) 
 {
     @Html.AntiForgeryToken()
     
     <div class="form-horizontal">
-        <h4>SANPHAM</h4>
+       
         <hr />
         @Html.ValidationSummary(true, "", new { @class = "text-danger" })
         <div class="form-group">
@@ -35,7 +35,7 @@
             @Html.LabelFor(model => model.Mota, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
                 <textarea name="Mota">Mô tả thông tin sản phẩm</textarea>
-                @Html.ValidationMessageFor(model => model.Mota, "", new { @class = "text-danger" })
+                
             </div>
         </div>
 
@@ -43,7 +43,7 @@
             @Html.LabelFor(model => model.HinhAnh, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
                 <input type="file" name="fileUpload" />
-                @*thong bao trung*@
+              
                 @ViewBag.Thongbao
                 @Html.ValidationMessageFor(model => model.HinhAnh, "", new { @class = "text-danger" })
             </div>

@@ -7,13 +7,14 @@
 
 <style type="text/css">
     #Datmua a {
-        clear: both;
+        
         background-color: red;
         color: white;
         width: 120px;
         height: 35px;
         display: block;
-        float: right;
+        float: left;
+        left:75px;
         text-align: center;
         padding-top: 10px;
         text-decoration: none;
@@ -27,21 +28,24 @@
 </style>
 
 
-<h3 style="text-align:center"> THÔNG TIN CHI TIẾT SP</h3>
-<div>
-    <div style="width:40%; float:left; border-left: dotted 1px; border-color:azure">
-        <img src="~/Content/images/@Model.HinhAnh" width="100%" />
-    </div>
-    <div style="width:60%; float:left; padding:10px">
-        <h4 style="font-weight:bold; color:red">Tên sách: @Model.TenSP </h4>
-        <p style="text-align:justify"><Span style="font-weight:bold"> Mô tả: </Span>@Model.Mota </p>
-        <p style="font-weight:bold"> Giá bán: <span style="color:red; font-size:16pt "> @String.Format("{0:0,0}", @Model.GiaBan)  VNĐ </span></p>
-    </div>
+<div style="display:flex;justify-content:center;font-family:'Times New Roman'">
+    
     <div>
-        <div id="Datmua">
-            <a href="@Url.Action("ThemGioHang", "GioHang", new { @iMaSP= @Model.MaSP, @strURL=Request.Url.ToString() })" class="list-group-item">
-                ĐẶT MUA
-            </a>
+        <h3 style="display:inline-flex;text-align:center"> THÔNG TIN CHI TIẾT ỐP lƯNG</h3>
+        <div style="width:40%; float:left; border-left: dotted 1px; border-color:azure">
+            <img src="~/Content/images/@Model.HinhAnh" width="350px" />
+        </div>
+        <div style="width:60%; float:left; padding:10px">
+            <h4 style="font-weight:bold; color:red">Ốp Lưng: @Model.TenSP </h4>
+            <p style="text-align:justify"><Span style="font-weight:bold"> Mô tả: </Span>@Model.Mota </p>
+            <p style="font-weight:bold"> Giá bán: <span style="color:red; font-size:16pt "> @String.Format("{0:0,0}", @Model.GiaBan)  VNĐ </span></p>
+        </div>
+        <div>
+            <div id="Datmua">
+                <a href="@Url.Action("ThemGioHang", "GioHang", new { @iMaSP= @Model.MaSP, @strURL=Request.Url.ToString() })" class="list-group-item">
+                    ĐẶT MUA
+                </a>
+            </div>
         </div>
     </div>
 </div>

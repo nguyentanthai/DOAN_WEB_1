@@ -24,11 +24,13 @@ namespace DOAN_WEB_1.Controllers
         {
             return View();
         }
-        public ActionResult SanPham(int? page)
+      
+        public ActionResult SanPham(int? page )
+
         {
+            
             int pageNumber = (page ?? 1);
-            int pageSize = 10;
-            //return View(db.SACHes.ToList());
+            int pageSize = 3;
             return View(db.SANPHAMs.ToList().OrderBy(n => n.MaSP).ToPagedList(pageNumber, pageSize));
         }
         [HttpPost]
@@ -58,6 +60,27 @@ namespace DOAN_WEB_1.Controllers
             }
             return View();
         }
+        public ActionResult QuanLyNguoiDung()
+        {
+            return View(db.KHACHHANGs.ToList());
+
+           
+        }
+        public ActionResult QuanLyAdmin()
+        {
+            return View(db.Admins.ToList());
+        }
+        [HttpGet]
+        public ActionResult ThemMoiAdmin()
+        {
+
+
+            return View();
+        }
+        public ActionResult Dondathang()
+        {
+            return View(db.DONDATHANGs.ToList());
+        }
 
         [HttpGet]
         public ActionResult ThemMoiSanPham()
@@ -66,6 +89,20 @@ namespace DOAN_WEB_1.Controllers
 
             return View();
         }
+        public ActionResult ChitietAdmin(string id)
+        {
+            Admin admin = db.Admins.SingleOrDefault(n => n.UserAdmin == id);
+            ViewBag.UserAdmin = admin.UserAdmin;
+            if (admin == null)
+            {
+                Response.StatusCode = 404;
+                return null;
+            }
+            return View(admin);
+
+            
+        }
+
         [HttpPost]
         [ValidateInput(false)]
         public ActionResult ThemMoiSanPham(SANPHAM sanpham, HttpPostedFileBase fileUpload)
@@ -104,14 +141,14 @@ namespace DOAN_WEB_1.Controllers
         public ActionResult Chitietsanpham(int id)
         {
             //Lay ra doi tuong sach theo ma
-            SANPHAM sach = db.SANPHAMs.SingleOrDefault(n => n.MaSP == id);
-            ViewBag.Masach = sach.MaSP;
-            if (sach == null)
+            SANPHAM sanpham = db.SANPHAMs.SingleOrDefault(n => n.MaSP == id);
+            ViewBag.MaSP = sanpham.MaSP;
+            if (sanpham == null)
             {
                 Response.StatusCode = 404;
                 return null;
             }
-            return View(sach);
+            return View(sanpham);
         }
         [HttpGet]
         public ActionResult XoaSanPham(int id)
@@ -131,7 +168,7 @@ namespace DOAN_WEB_1.Controllers
         {
             //Lay ra doi tuong sach can xoa theo ma
             SANPHAM sanpham = db.SANPHAMs.SingleOrDefault(n => n.MaSP == id);
-            ViewBag.Masach = sanpham.MaSP;
+            ViewBag.MaSP = sanpham.MaSP;
             if (sanpham == null)
             {
                 Response.StatusCode = 404;
@@ -146,7 +183,7 @@ namespace DOAN_WEB_1.Controllers
         {
             //Lay ra doi tuong sach theo ma
             SANPHAM sanpham = db.SANPHAMs.SingleOrDefault(n => n.MaSP == id);
-            ViewBag.Masach = sanpham.MaSP;
+            ViewBag.MaSP = sanpham.MaSP;
             if (sanpham == null)
             {
                 Response.StatusCode = 404;
@@ -190,5 +227,6 @@ namespace DOAN_WEB_1.Controllers
                 return RedirectToAction("SanPham");
             }
         }
+
     }
 }

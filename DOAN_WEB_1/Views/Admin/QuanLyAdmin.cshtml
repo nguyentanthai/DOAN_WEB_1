@@ -1,0 +1,46 @@
+﻿@model IEnumerable<DOAN_WEB_1.Models.Admin>
+
+@{
+    ViewBag.Title = "QuanLyAdmin";
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+<h2 style="text-align:center">Thông Tin Admin</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            User ADMIN
+        </th>
+        <th>
+            Mật khẩu Admin
+        </th>
+        <th>
+            Họ Tên Admin
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+<tr>
+    <td>
+        @Html.DisplayFor(modelItem => item.UserAdmin)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.PassAdmin)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.HoTen)
+    </td>
+    <td>
+        @Html.ActionLink("Sửa", "Edit", new { id = item.UserAdmin }) |
+        @Html.ActionLink("Chi Tiết", "Details", new { id = item.UserAdmin }) |
+        @Html.ActionLink("Xóa", "Delete", new { id = item.UserAdmin })
+    </td>
+</tr>
+}
+
+</table>

@@ -34,14 +34,18 @@
 
     <link href="~/Content/css/responsive.css" rel="stylesheet" />
 </head>
-<body>
+<body >
         <!-- header section strats -->
-        <header class="header_section">
+        <header class="header_section"style="background-color: #FFFF99 ">
             <div class="container-fluid">
                 <nav class="navbar navbar-expand-lg custom_nav-container ">
                     <a class="navbar-brand" href="index.html">
-                        <span>
-                            TaoStore
+                        <span >
+                            <a href="/OpLungStore/Index">
+                                TaoStore
+                                <img src="~/Content/images/1231.png" width="40px" />
+                            </a>                       
+                            
 
                         </span>
                     </a>
@@ -53,7 +57,7 @@
                     <div class="collapse navbar-collapse" id="navbarSupportedContent">
                         <ul class="navbar-nav">
                             <li class="nav-item active">
-                                <a class="nav-link" href="/OpLungStore/Index">Trang Chủ <span class="sr-only">(current)</span></a>
+                                <a class="nav-link" href="/OpLungStore/Index">Trang Chủ</a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link" href="/OpLungStore/Index"> Sản Phẩm </a>
@@ -68,13 +72,10 @@
                         </ul>
                         @using (Html.BeginForm("KQTimKiem", "TimKiem"))
                         {
-                        <input type="text" name="sTuKhoa" value="" placeholder="Nhập tên sản phẩm cần tìm" />
-                        <input type="submit" name=" submit" value="Tìm kiếm" class="form-control" style="border-radius:10px" />
+                        <input type="text" name="sTuKhoa" value="" placeholder="Nhập tên sản phẩm cần tìm" border-radius="10px" />
+                        <input type="submit" name=" submit" value="Tìm kiếm" class="form-control" border-radius="10px"/>
 
                         }
-
-
-
                         <div class="user_option-box">
                             <a href="/NguoiDung/DangNhap">
                                 Đăng nhập
@@ -82,13 +83,9 @@
                             <a href="/NguoiDung/DangKy">
                                 Đăng ký
                             </a>
-                            <ul>
-                                <li>
 
-                                    @Html.Action("GiohangPartial", "Giohang")
-
-                                </li>
-                            </ul>
+                                    @Html.Action("GiohangPartial", "Giohang") 
+                            
                         </div>
                     </div>
                 </nav>
@@ -96,7 +93,7 @@
         </header>
         <!-- end header section -->
         <!-- slider section -->
-        <section class="slider_section ">
+        <section class="slider_section " style="panding-bottom:20px " >
             <div id="customCarousel1" class="carousel slide" data-ride="carousel">
                 <div class="carousel-inner">
                     <div class="carousel-item active">
@@ -105,21 +102,17 @@
                                 <div class="col-md-6">
                                     <div class="detail-box">
                                         <h1>
-                                            Smart Watches
+                                            ỐP LƯNG ĐANG HOT
                                         </h1>
                                         <p>
-                                            Aenean scelerisque felis ut orci condimentum laoreet. Integer nisi nisl, convallis et augue sit amet, lobortis semper quam.
+                                            Ốp lưng được làm từ chất liệu Viền nhựa TPU cao cấp. Viền ốp dẻo bo kín phần lưng và viền máy, tránh trầy xước khi va chạm. Viền ốp dẻo giúp tháo lắp máy dễ dàng mà không lo trầy xước máy.
                                         </p>
-                                        <div class="btn-box">
-                                            <a href="" class="btn1">
-                                                Contact Us
-                                            </a>
-                                        </div>
                                     </div>
                                 </div>
                                 <div class="col-md-6">
                                     <div class="img-box">
-                                        <img src="~/Content/images/op1.png" width="50px" />
+
+                                        <img src="~/Content/images/op1.png" width="10px"/>
 
                                     </div>
                                 </div>
@@ -132,21 +125,16 @@
                                 <div class="col-md-6">
                                     <div class="detail-box">
                                         <h1>
-                                            Smart Watches
+                                            ỐP LƯNG ĐANG HOT
                                         </h1>
                                         <p>
-                                            Aenean scelerisque felis ut orci condimentum laoreet. Integer nisi nisl, convallis et augue sit amet, lobortis semper quam.
+                                            Ốp lưng được làm từ chất liệu Viền nhựa TPU cao cấp. Viền ốp dẻo bo kín phần lưng và viền máy, tránh trầy xước khi va chạm. Viền ốp dẻo giúp tháo lắp máy dễ dàng mà không lo trầy xước máy.
                                         </p>
-                                        <div class="btn-box">
-                                            <a href="" class="btn1">
-                                                Contact Us
-                                            </a>
-                                        </div>
                                     </div>
                                 </div>
                                 <div class="col-md-6">
                                     <div class="img-box">
-                                        <img src="~/Content/images/op1.png" />
+                                        <img src="~/Content/images/op7.png" width="10px" />
                                     </div>
                                 </div>
                             </div>
@@ -158,21 +146,16 @@
                                 <div class="col-md-6">
                                     <div class="detail-box">
                                         <h1>
-                                            Smart Watches
+                                            ỐP LƯNG ĐANG HOT
                                         </h1>
                                         <p>
-                                            Aenean scelerisque felis ut orci condimentum laoreet. Integer nisi nisl, convallis et augue sit amet, lobortis semper quam.
+                                            Ốp lưng được làm từ chất liệu Viền nhựa TPU cao cấp. Viền ốp dẻo bo kín phần lưng và viền máy, tránh trầy xước khi va chạm. Viền ốp dẻo giúp tháo lắp máy dễ dàng mà không lo trầy xước máy.
                                         </p>
-                                        <div class="btn-box">
-                                            <a href="" class="btn1">
-                                                Contact Us
-                                            </a>
-                                        </div>
                                     </div>
                                 </div>
                                 <div class="col-md-6">
                                     <div class="img-box">
-                                        <img src="~/Content/images/op1.png" />
+                                        <img src="~/Content/images/op9.png" width="10px" />
                                     </div>
                                 </div>
                             </div>
@@ -185,13 +168,9 @@
                     <li data-target="#customCarousel1" data-slide-to="2"></li>
                 </ol>
             </div>
-
         </section>
-
-
-        @RenderBody()
-
-    <footer class="footer_section">
+                         @RenderBody()
+    <footer class="footer_section" style="display:block">
         <div class="container">
             <div class="row">
                 <div class="col-md-6 col-lg-3 footer-col">
@@ -257,7 +236,6 @@
                         <div class="map">
                             <div id="googleMap">
                                 <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3918.8359919937448!2d106.68941111471896!3d10.823860192289361!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x317528f1b76f9fed%3A0x4c73436d7210e287!2zNDk3IMSQLiBQaGFuIFbEg24gVHLhu4ssIFBoxrDhu51uZyA1LCBHw7IgVuG6pXAsIFRow6BuaCBwaOG7kSBI4buTIENow60gTWluaCwgVmnhu4d0IE5hbQ!5e0!3m2!1svi!2s!4v1656687993690!5m2!1svi!2s" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>   
-                                
                             </div>
                         </div>
                     </div>
@@ -268,9 +246,7 @@
                     &copy; <span id="displayYear"></span> All Rights Reserved By Tấn Thái
 
                 </p>
-
             </div>
-
         </div>
 
     </footer>
@@ -292,9 +268,6 @@
         <script src="~/Scripts/js/custom.js"></script>
         <!-- Google Map -->
       
-       
-        
-
         <!-- End Google Map -->
 
 </body>

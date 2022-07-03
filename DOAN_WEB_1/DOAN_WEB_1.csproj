@@ -239,6 +239,7 @@
     <Content Include="Content\css\font-awesome.min.css" />
     <Content Include="Content\css\responsive.css" />
     <Content Include="Content\css\style.css" />
+    <Content Include="Content\images\1231.png" />
     <Content Include="Content\images\about-img.png" />
     <Content Include="Content\images\c1.jpg" />
     <Content Include="Content\images\c2.jpg" />
@@ -249,6 +250,7 @@
     <Content Include="Content\images\f4.png" />
     <Content Include="Content\images\favicon.png" />
     <Content Include="Content\images\giohang.png" />
+    <Content Include="Content\images\logoip.png" />
     <Content Include="Content\images\op1.png" />
     <Content Include="Content\images\op10.png" />
     <Content Include="Content\images\op11.png" />
@@ -463,6 +465,11 @@
     <Content Include="Views\Admin\Chitietsanpham.cshtml" />
     <Content Include="Views\Admin\XoaSanPham.cshtml" />
     <Content Include="Views\Admin\SuaSanPham.cshtml" />
+    <Content Include="Views\Admin\QuanLyNguoiDung.cshtml" />
+    <Content Include="Views\Admin\QuanLyAdmin.cshtml" />
+    <Content Include="Views\Admin\Dondathang.cshtml" />
+    <Content Include="Views\Admin\ThemMoiAdmin.cshtml" />
+    <Content Include="Views\Admin\ChitietAdmin.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

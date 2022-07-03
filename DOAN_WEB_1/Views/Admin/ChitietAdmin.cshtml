@@ -1,0 +1,42 @@
+﻿@model DOAN_WEB_1.Models.Admin
+
+@{
+    ViewBag.Title = "ChitietAdmin";
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+<h2>Thông tin Admin</h2>
+
+<div>
+    <h4>Admin</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.UserAdmin)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.UserAdmin)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.PassAdmin)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PassAdmin)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.HoTen)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.HoTen)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.UserAdmin }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

@@ -1,0 +1,58 @@
+﻿@model IEnumerable<DOAN_WEB_1.Models.DONDATHANG>
+
+@{
+    ViewBag.Title = "Dondathang";
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+<h2>Đơn Đặt Hàng</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            Đã Thanh Toán
+        </th>
+        <th>
+            Tình Trạng Giao Hàng
+        </th>
+        <th>
+            Ngày Đặt Hàng
+        </th>
+        <th>
+            Ngày Giao Hàng
+        </th>
+        <th>
+            Mã Khách Hàng
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Dathanhtoan)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.TinhTrangGH)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.NgayDH)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.NgayGH)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.MaKH)
+        </td>
+        <td>
+            @Html.ActionLink("Sửa", "Edit", new { id=item.MaDH }) |
+            @Html.ActionLink("Xem chi tiết", "Details", new { id=item.MaDH }) |
+            @Html.ActionLink("Xóa", "Delete", new { id=item.MaDH })
+        </td>
+    </tr>
+}
+
+</table>

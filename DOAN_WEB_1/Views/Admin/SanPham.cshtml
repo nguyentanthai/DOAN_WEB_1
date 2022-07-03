@@ -1,64 +1,90 @@
-﻿@model IEnumerable<DOAN_WEB_1.Models.SANPHAM>
-
+﻿@using DOAN_WEB_1.Models;
+@using PagedList.Mvc;
+@model PagedList.PagedList<DOAN_WEB_1.Models.SANPHAM>
+@helper Truncate(string input, int length)
+{
+    if (input.Length < length)
+    {
+        @input
+    }
+    else
+    {
+        @input.Substring(0, length)<text>...</text>
+    }
+}
 @{
     ViewBag.Title = "SanPham";
     Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
 }
 
 <h2 style="text-align:center">Quản lí sản phẩm</h2>
+@using (Html.BeginForm("Admin", "SanPham", FormMethod.Get))
+{
+    <p>
+        Tìm tên sản phẩm: @Html.TextBox("SearchString", ViewBag.CurrentFilter as string)
+        <input type="submit" value="Tìm kiếm" />
+    </p>
 
+}
+<hr />
 <p>
     @Html.ActionLink("Thêm Mới Sản Phẩm", "ThemMoiSanPham")
 </p>
-<table class="table">
+<table class="table" border="1">
     <tr>
-        <th>
-            @Html.DisplayNameFor(model => model.TenSP)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.GiaBan)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Mota)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.HinhAnh)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.SoLuong)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.NgayCapNhap)
-        </th>
-        <th></th>
+        <th style="width:200px">  Tên ốp lưng </th>
+        <th style="width:100px">  Giá bán  </th>
+        <th style="width:300px">  Mô tả    </th>
+        <th style="width:120px">  Ảnh bìa  </th>
+        <th style="width:120px">  Số Lượng </th>
+        <th style="width:150px">  Ngày cập nhật </th>
+
+
+        <th style="width:200px">  </th>
     </tr>
 
-@foreach (var item in Model) {
-    <tr>
-        <td>
-            @Html.DisplayFor(modelItem => item.TenSP)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.GiaBan)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Mota)
-        </td>
-        <td>
-            <img src="@Url.Content("~/Content/images/"+  item.HinhAnh)" width="120px" />
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.SoLuong)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.NgayCapNhap)
-        </td>
-        <td>
-            @Html.ActionLink("Sửa Sản Phẩm", "SuaSanPham", new { id=item.MaSP }) |
-            @Html.ActionLink("Chi Tiết", "Chitietsanpham", new { id=item.MaSP }) |
-            @Html.ActionLink("Xóa Sản Phẩm", "XoaSanPham", new { id=item.MaSP })
-        </td>
-    </tr>
-}
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.TenSP)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.GiaBan)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Mota)
+            </td>
+            <td>
+                <img src="@Url.Content("~/Content/images/"+  item.HinhAnh)" width="120px" />
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.SoLuong)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.NgayCapNhap)
+            </td>
+            <td>
+                @Html.ActionLink("Sửa Sản Phẩm", "SuaSanPham", new { id = item.MaSP }) |
+                @Html.ActionLink("Chi Tiết", "Chitietsanpham", new { id = item.MaSP }) |
+                @Html.ActionLink("Xóa Sản Phẩm", "XoaSanPham", new { id = item.MaSP })
+            </td>
+        </tr>
+    }
 
 </table>
+
+Trang @(Model.PageCount < Model.PageNumber ? 0 : Model.PageNumber)/@Model.PageCount;
+<div class="MenuTrang" >
+
+    @Html.PagedListPager(Model, page => Url.Action("SanPham", new { page = page }))
+</div>
+<style >
+    .MenuTrang li {
+        display: inline;
+       
+    }
+    .pagination {
+        border-radius:5px;
+    }
+</style>
