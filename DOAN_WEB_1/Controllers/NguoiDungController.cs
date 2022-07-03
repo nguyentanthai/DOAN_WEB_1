@@ -68,6 +68,7 @@ namespace DOAN_WEB_1.Controllers
         [HttpGet]
         public ActionResult DangNhap()
         {
+
             return View();
         }
         [HttpPost]
