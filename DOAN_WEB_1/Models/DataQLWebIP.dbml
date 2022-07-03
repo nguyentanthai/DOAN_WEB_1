@@ -1,17 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?><Database Name="WebBanOpIP" Class="DataQLWebIPDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
-  <Connection Mode="WebSettings" ConnectionString="Data Source=MSI\SQLEXPRESS;Initial Catalog=WebBanOpIP;Integrated Security=True" SettingsObjectName="System.Configuration.ConfigurationManager.ConnectionStrings" SettingsPropertyName="webbanIPConnectionString" Provider="System.Data.SqlClient" />
-  <Table Name="dbo.HD" Member="HDs">
-    <Type Name="HD">
-      <Column Name="MaHD" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
-      <Column Name="MaKH" Type="System.Int32" DbType="Int" CanBeNull="true" />
-      <Column Name="MaNV" Type="System.Int32" DbType="Int" CanBeNull="true" />
-      <Column Name="TongTien" Type="System.Double" DbType="Float" CanBeNull="true" />
-      <Column Name="NgayLapHD" Type="System.DateTime" DbType="Date" CanBeNull="true" />
-      <Association Name="HD_CHITIETHD" Member="CHITIETHDs" ThisKey="MaHD" OtherKey="MaHD" Type="CHITIETHD" />
-      <Association Name="NHANVIEN_HD" Member="NHANVIEN" ThisKey="MaNV" OtherKey="MaNV" Type="NHANVIEN" IsForeignKey="true" />
-      <Association Name="KHACHHANG_HD" Member="KHACHHANG" ThisKey="MaKH" OtherKey="MaKH" Type="KHACHHANG" IsForeignKey="true" />
-    </Type>
-  </Table>
+  <Connection Mode="WebSettings" ConnectionString="Data Source=MSI\SQLEXPRESS;Initial Catalog=WebBanOpIP;Integrated Security=True" SettingsObjectName="System.Configuration.ConfigurationManager.ConnectionStrings" SettingsPropertyName="WebBanOpIPConnectionString" Provider="System.Data.SqlClient" />
   <Table Name="dbo.SANPHAM" Member="SANPHAMs">
     <Type Name="SANPHAM">
       <Column Name="MaSP" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
@@ -48,6 +36,18 @@
       <Column Name="DienThoai" Type="System.String" DbType="NChar(15)" CanBeNull="true" />
       <Association Name="KHACHHANG_HD" Member="HDs" ThisKey="MaKH" OtherKey="MaKH" Type="HD" />
       <Association Name="KHACHHANG_DONDATHANG" Member="DONDATHANGs" ThisKey="MaKH" OtherKey="MaKH" Type="DONDATHANG" />
+    </Type>
+  </Table>
+  <Table Name="dbo.HD" Member="HDs">
+    <Type Name="HD">
+      <Column Name="MaHD" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="MaKH" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="MaNV" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="TongTien" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="NgayLapHD" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Association Name="HD_CHITIETHD" Member="CHITIETHDs" ThisKey="MaHD" OtherKey="MaHD" Type="CHITIETHD" />
+      <Association Name="KHACHHANG_HD" Member="KHACHHANG" ThisKey="MaKH" OtherKey="MaKH" Type="KHACHHANG" IsForeignKey="true" />
+      <Association Name="NHANVIEN_HD" Member="NHANVIEN" ThisKey="MaNV" OtherKey="MaNV" Type="NHANVIEN" IsForeignKey="true" />
     </Type>
   </Table>
   <Table Name="dbo.DONDATHANG" Member="DONDATHANGs">

@@ -40,13 +40,6 @@
     <LegacyPublishPropertiesPageEnabled>true</LegacyPublishPropertiesPageEnabled>
     <PublishDatabaseSettings>
       <Objects>
-        <ObjectGroup Name="webbanIPConnectionString-Deployment" Order="1">
-          <Destination Path="Data Source=webbanopip.mssql.somee.com%3bInitial Catalog=webbanopip%3bPersist Security Info=False%3bUser ID=Nguyenthai123_SQLLogin_1%3bPassword=bbnqunj3n1%3bPacket Size=4096%3bWorkstation ID=webbanopip.mssql.somee.com" />
-          <Object Type="DbFullSql" Enabled="False">
-            <PreSource Path="Data Source=MSI\SQLEXPRESS%3bInitial Catalog=WebBanOpIP%3bIntegrated Security=True" ScriptSchema="True" ScriptData="False" CopyAllFullTextCatalogs="False" DriDefaults="True" />
-            <Source Path="obj\Debug\AutoScripts\webbanIPConnectionString-Deployment_SchemaOnly.sql" Transacted="True" />
-          </Object>
-        </ObjectGroup>
       </Objects>
     </PublishDatabaseSettings>
     <IncludeIisSettings>false</IncludeIisSettings>
@@ -311,11 +304,6 @@
     <Content Include="fonts\fonts\fontawesome-webfont.ttf" />
     <Content Include="fonts\fonts\fontawesome-webfont.woff" />
     <Content Include="fonts\fonts\fontawesome-webfont.woff2" />
-    <Content Include="Models\DataQLWebIP.dbml">
-      <Generator>MSLinqToSQLGenerator</Generator>
-      <LastGenOutput>DataQLWebIP.designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </Content>
     <Content Include="Content\assets\bootstrap\css\bootstrap-theme.css.map" />
     <Content Include="Content\assets\bootstrap\css\bootstrap.css.map" />
     <Content Include="Content\assets\bootstrap\fonts\glyphicons-halflings-regular.eot" />
@@ -353,6 +341,11 @@
     <Content Include="Content\assets\font-awesome\scss\_rotated-flipped.scss" />
     <Content Include="Content\assets\font-awesome\scss\_stacked.scss" />
     <Content Include="Content\assets\font-awesome\scss\_variables.scss" />
+    <Content Include="Models\DataQLWebIP.dbml">
+      <Generator>MSLinqToSQLGenerator</Generator>
+      <LastGenOutput>DataQLWebIP.designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </Content>
     <None Include="Models\DataQLWebIP.dbml.layout">
       <DependentUpon>DataQLWebIP.dbml</DependentUpon>
     </None>
